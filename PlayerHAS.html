@@ -76,7 +76,7 @@
 
 
 <div style="clear:both;">
-        <button autofocus type="button" class="btn btn-primary ml-5" onclick="playSelectedStream()">Play</button>
+        <button autofocus type="button" class="btn btn-primary ml-5" onclick="playSelectedStream()" disabled id="play">Loading</button>
 
 </div>
 
@@ -101,7 +101,7 @@
     <script>
     $( document ).ready(function(){
         loaded();
-        playSelectedStream();
+        $('#play').prop('disabled', false).text('Play').focus();
     });
     </script>
 </body>
