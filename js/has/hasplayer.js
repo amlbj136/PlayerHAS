@@ -22957,7 +22957,7 @@ MediaPlayer.dependencies.protection.KeySystem_PlayReady = function() {
 
     var keySystemStr = "com.microsoft.playready",
         keySystemUUID = "9a04f079-9840-4286-ab92-e65be0885f95",
-        messageFormat = "utf8",
+        messageFormat = (navigator.userAgent.match(/Edg/i) || navigator.userAgent.match(/Trident/i)) ? "utf16" : "uft8",
         PRCDMData = '<PlayReadyCDMData type="LicenseAcquisition"><LicenseAcquisition version="1.0" Proactive="false"><CustomData encoding="base64encoded">%CUSTOMDATA%</CustomData></LicenseAcquisition></PlayReadyCDMData>',
         protData,
 
