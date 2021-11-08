@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayReady Test Server</title>
+
+    
+    
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/site.css" />
+    
+
+<script type="text/javascript">
+	
+    var appInsights=window.appInsights||function(a){
+        function b(a){c[a]=function(){var b=arguments;c.queue.push(function(){c[a].apply(c,b)})}}var c={config:a},d=document,e=window;setTimeout(function(){var b=d.createElement("script");b.src=a.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js",d.getElementsByTagName("script")[0].parentNode.appendChild(b)});try{c.cookie=d.cookie}catch(a){}c.queue=[];for(var f=["Event","Exception","Metric","PageView","Trace","Dependency"];f.length;)b("track"+f.pop());if(b("setAuthenticatedUserContext"),b("clearAuthenticatedUserContext"),b("startTrackEvent"),b("stopTrackEvent"),b("startTrackPage"),b("stopTrackPage"),b("flush"),!a.disableExceptionTracking){f="onerror",b("_"+f);var g=e[f];e[f]=function(a,b,d,e,h){var i=g&&g(a,b,d,e,h);return!0!==i&&c["_"+f](a,b,d,e,h),i}}return c
+    }({
+        sdkExtension: 'ar',
+		instrumentationKey: 'bf6bd122-28a9-418e-813d-6d7ed9026c7e'
+    });
+
+    window.appInsights=appInsights,appInsights.queue&&0===appInsights.queue.length&&appInsights.trackPageView();
+	
+    </script></head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0" >
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item"><a class="" href="/"><img src="/images/microsoft-logo-full-color.png" alt="Microsoft Logo" style="width:166px;margin-left:-30px; margin-top:-0px; padding-top:0px;"></a></li>
+                <li class="nav-item mt-2"><a class="nav-link h5" href="/">PlayReady Test and Documentation Server</a></li>
+
+            </ul>
+            
+
+
+<ul class=" navbar-nav">
+    <li><a class="nav-link" href="/Account/SignIn">Sign in</a></li>
+</ul>
+
+
+        </nav>
+
+
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark mt-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Content</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Content/Content2X">Content PlayReady 2.X</a></li>
+                            <li><a class="dropdown-item" href="/Content/Content3X">Content PlayReady 3.X</a></li>
+                            <li><a class="dropdown-item" href="/Content/Content4X">Content PlayReady 4.X</a></li>
+                            <li><a class="dropdown-item" href="/Content/ContentAV1">Content PlayReady + AV1</a></li>
+                            <li><a class="dropdown-item" href="/Content/ContentAudioOnly">Content Audio Only</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/Content/ContentVendors">Content from Encoder Vendors</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Server</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Server/Service">License Server 4.0 - Description</a></li>
+                            <li><a class="dropdown-item" href="/Server/ServiceQueryStringSyntax">Query String Syntax (preferred)</a></li>
+                            <li><a class="dropdown-item" href="/Server/ServiceCustomDataJSONSyntax">CustomData JSON Syntax</a></li>
+                            <li><a class="dropdown-item" href="/Server/ServiceBase64JSONSyntax">Base 64 JSON Syntax</a></li>
+                            <li><a class="dropdown-item" href="/Server/ServiceLegacySyntax">Legacy Syntax</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="/Server/ServiceVersioned">License Servers (other versions)</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="/Server/ServiceSecureStop">Secure Stop Server</a></li>
+                            <li><a class="dropdown-item" href="/Server/ServiceSecureDelete">Secure Delete Server</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item  dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Tool/PlayerHAS">JavaScript Player</a></li>
+                            <li><a class="dropdown-item" href="/Tool/PlayerSilverlight">Silverlight Player</a></li>
+                            <li><a class="dropdown-item" href="/Tool/Hwdrm">HWDRM Test App</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item  dropdown mr-5">
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Doc/Documentation">Documentation Links</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="/Doc/TestingOutputProtections">Testing Output Protections</a></li>
+                            <li><a class="dropdown-item" href="/Doc/TestingServerExceptions">Testing Server Exceptions</a></li>
+                            <li><a class="dropdown-item" href="/Doc/TestingClientInfo">Testing Client Info</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+
+                        <a href="#" class=" nav-link disabled text-white">Licensee:</a>
+                    </li>
+                    <li class="nav-item  dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Doc/VideoTutorials">Video Tutorials</a></li>
+                            <li><a class="dropdown-item" href="/Doc/FAQs">FAQs</a></li>
+                            <li><a class="dropdown-item" href="/Doc/downloads">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item  dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Tool/LicenseInspector">License Inspector</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li class="nav-item  dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Support/SupportOptions">Support Options</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="/Support/ServiceStatus">Service Status</a></li>
+                            
+                            <!--
+            <li><a class="dropdown-item" asp-area="" asp-controller="Support" asp-action="HowToRegisterForSupport">How to Register for Technical Support</a></li>
+            <li><a class="dropdown-item" asp-area="" asp-controller="Support" asp-action="HowToGetSupport">How to Get Technical Support</a></li>
+                -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+    </div>
+    <div class="container body-content" style="margin-top:10px;">
+        
+<h2>Javascript HAS Player for Adaptive Streaming</h2>
+
+<p>This page include a HTML5 player that plays adaptive streams.</p>
+<br />
+<br />
+
+
+
+<style>
+    .playerInput {
+        width: 740px;
+        max-width: 720px;
+        height: 30px;
+        font-size: 1.0em;
+    }
+
+    .playerInputLabel {
+        margin-top: 0px;
+        font-size: 1.2em;
+        width: 200px;
+    }
+
+    video {
+        width: 100%;
+        height: 440px;
+    }
+
+    #silverlightControlHost {
+        height: 440px;
+        text-align: center;
+    }
+
+</style>
+
+
+<div style="background-color:#FFFFFF;">
+    <p>
+        <div style="float:left;background-color:#FFFFFF;">
+            <h3 class="playerInputLabel">Content Manifest:</h3>
+        </div>
+        <div style="float:left;background-color:#FFFFFF;">
+            <input type="text" id="txtManifest" list="productName" class="playerInput" autofocus />
+        </div>
+        <div style="clear:both;"></div>
+        <div style="float:left;">
+            <h3 class="playerInputLabel">License Service:</h3>
+        </div>
+        <div style="float:left;">
+            <input type="text" id="txtLAURL" class="playerInput" value="https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:false,sl:150)" />
+        </div>
+
+        
+
+
+        <datalist id="productName">
+            <option value="https://amssamples.streaming.mediaservices.windows.net/683f7e47-bd83-4427-b0a3-26a6c4547782/BigBuckBunny.ism/manifest(format=mpd-time-csf)">Big Buck Bunny - AMS - DASH - 1080p - H264 - Clear</option>
+            <option value="https://profficialsite.origin.mediaservices.windows.net/c51358ea-9a5e-4322-8951-897d640fdfd7/tearsofsteel_4k.ism/manifest(format=mpd-time-csf)">Tears of Steel 4K - AMS - DASH - H264 - Protected</option>
+            <option value="https://dash.edgesuite.net/envivio/dashpr/clear/Manifest.mpd">Envivio - Dash - Clear</option>
+            <option value="https://test.playready.microsoft.com/smoothstreaming/SSWSS720H264/SuperSpeedway_720.ism/Manifest">Super Speedway - IIS - Smooth - 720p - H264 - Clear</option>
+            <option value="https://profficialsite.origin.mediaservices.windows.net/318b5aa4-e6af-4777-bfe8-be4cdddcf371/SuperSpeedway_720.ism/manifest">Super Speedway - AMS - Smooth - 720p - H264 - Clear</option>
+            <option value="https://test.playready.microsoft.com/smoothstreaming/SSWSS720H264PR/SuperSpeedway_720.ism/Manifest">Super Speedway - IIS - Smooth - 720p - H264 - Protected</option>
+            <option value="https://profficialsite.origin.mediaservices.windows.net/09e36702-8f33-436c-a5dd-60ffe6671e70/SuperSpeedway_720PR.ism/manifest">Super Speedway - AMS - Smooth - 720p - H264 - Protected</option>
+        </datalist>
+    </p>
+</div>
+
+
+
+<div style="clear:both;">
+        <button type="button" class="btn btn-primary ml-5" onclick="playSelectedStream()">Play</button>
+
+</div>
+
+
+<div id="videoPlayerWrapper">
+    <video id="videoPlayer" controls="true" />
+</div>
+
+
+        <br /><hr />
+        <footer>
+            <address>
+                <strong>PlayReady Business related Queries:</strong> email to <a href="mailto:playready@microsoft.com">playready@microsoft.com</a><br />
+                <strong>PlayReady Operations related Queries:</strong> visit <a href="http://wmlalicensing.com/">http://wmlalicensing.com/</a> and email to <a href="mailto:wmla@microsoft.com">wmla@microsoft.com</a><br />
+                <strong>PlayReady Technical Support:</strong> visit <a href="https://test.playready.microsoft.com/Support/SupportOptions">https://test.playready.microsoft.com/Support/SupportOptions</a><br />
+                <strong>Support and Information about PlayReady Trainings:</strong> email to <a href="mailto:plyrdyev@microsoft.com">plyrdyev@microsoft.com</a><br />
+            </address>
+
+            <div class="mx-auto" style="width: 200px;">&copy; 2018 Microsoft</div>
+        </footer>
+    </div>
+
+    
+
+    
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU"></script>
+    
+
+    
+    <!--<script src="~/Scripts/dash.debug.js"></script>-->
+    <script src="/js/has/hasplayer.js?17"></script>
+    <script src="/js/has/testplayer.js?17"></script>
+
+</body>
+</html>
