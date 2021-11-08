@@ -22957,7 +22957,7 @@ MediaPlayer.dependencies.protection.KeySystem_PlayReady = function() {
 
     var keySystemStr = "com.microsoft.playready",
         keySystemUUID = "9a04f079-9840-4286-ab92-e65be0885f95",
-        messageFormat = "utf16",
+        messageFormat = "utf8",
         PRCDMData = '<PlayReadyCDMData type="LicenseAcquisition"><LicenseAcquisition version="1.0" Proactive="false"><CustomData encoding="base64encoded">%CUSTOMDATA%</CustomData></LicenseAcquisition></PlayReadyCDMData>',
         protData,
 
@@ -23008,7 +23008,7 @@ MediaPlayer.dependencies.protection.KeySystem_PlayReady = function() {
             msg = String.fromCharCode.apply(null, dataview);
             xmlDoc = this.domParser.createXmlTree(msg);
 
-            if (xmlDoc.getElementsByTagName("Challenge")[0]) {
+            if (xmlDoc.getElementsByTagName("PlayReadyKeyMessage")[0]) {
                 Challenge = xmlDoc.getElementsByTagName("Challenge")[0].childNodes[0].nodeValue;
                 if (Challenge) {
                     licenseRequest = BASE64.decode(Challenge);
