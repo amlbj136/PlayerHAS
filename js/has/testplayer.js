@@ -37,6 +37,7 @@ function playSelectedStream() {
     };
     player.init(video);
     player.load(stream);
+    player.setDebug(true);
 
     videoPlayerWrapper.style.display = "block";
 }
